@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	background: #05053fcb;
+	/* background: linear-gradient(139deg,#024237cb 0%,#ff2903b6 90%); */
+}
+.header{
+	color: rgb(154, 159, 192);
+	text-align: center;
+	font-size: 3em;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+.container{
+	position: relative;
+	max-width: 1069px;
+	padding: 97px;
+	margin: 30px auto;
+	border: 6px solid white;
+	border-radius: 30px;
+	background: #000;
+	min-height: 800px;
+}
+.addTask{
+	width: 100%;
+	display: flex;
+	padding: 10px 0;
+}
+.addTask > input[type="text"]{
+	width: 90%;
+	color: #fffdfd;
+	border:none;
+	border-bottom: 2px solid #666;
+	background: none;
+	padding: 10px;
+	font-size: 22px;
+	outline: none;
+}
+.addTask button{
+	margin: 0 10px;
+	background: #130553;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.notCompleted, .Completed{
+	margin: 56px 0;
+	padding: 30px;
+	width: 428px;
+}
+.c{
+	display: flex;
+
+	width: 854px;
+}
+h3{
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	margin-right: 90px;
+}
+ol{
+	list-style: none;
+	counter-reset: my-counter;
+}
+ol li{
+	width: 380px;
+	padding: 18px;
+	margin: 5px 0;
+	background: #e96969bb;
+	font-size: 22px;
+	counter-increment: my-counter;
+}
+ol.Completed li{
+	background: #00ff62;
+	width: 355px;
+}
+ol li::before{
+	content: counter(my-counter);
+	background: #040113;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 20%;
+	display: inline-block;
+	line-height: 2rem;
+	text-align: center;
+	color: #fff;
+	margin-right: 0.5rem;
+}
+li button{
+	float: right;
+	padding: 5px;
+	font-size: 28px;
+	line-height: 28px;
+	margin-right: 15px;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
